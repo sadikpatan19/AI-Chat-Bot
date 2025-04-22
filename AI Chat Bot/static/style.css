@@ -1,0 +1,112 @@
+body {
+    font-family: sans-serif; /* Use a clean, modern font */
+    background-color: #ffffff; /* Subtle background color for the whole page */
+    display: flex;
+    justify-content: center; /* Center the chat container horizontally */
+    align-items: center; /* Center the chat container vertically */
+    min-height: 100vh;  /* Ensure the body takes up full viewport height */
+    margin: 0; /* Remove default body margins */
+}
+
+.chat-container {
+    width: 400px; /* Adjust as needed */
+    background-color: #fff; /* White background for the chat container */
+    border-radius: 8px; /* Slightly more rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevents content from overflowing */
+    display: flex;
+    flex-direction: column;
+    height: 500px; /* or a percentage like 80vh */
+}
+
+.chat-header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 15px; /* Increased padding */
+    text-align: center;
+    font-weight: 600; /* Slightly bolder font weight */
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 15px; /* Increased padding */
+    overflow-y: auto;
+    background-color: #f9f9f9; /* Slightly off-white background */
+}
+
+.chat-message,.message {
+    margin-bottom: 12px; /* Increased margin */
+    padding: 12px; /* Increased padding */
+    border-radius: 8px; /* Slightly more rounded corners */
+    max-width: 80%; /* Prevents messages from taking up full width */
+    clear: both;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle message shadow */
+}
+
+.chat-message.bot {
+    background-color: #f0f0f0; /* Light gray, slightly darker than before */
+    float: left;
+    text-align: left;
+    
+}
+
+.chat-message.user {
+    background-color: #3797f0; /* Light green */
+    float: right;
+    text-align: left;
+}
+
+.chat-input {
+    padding: 15px; /* Increased padding */
+    border-top: 1px solid #eee; /* Lighter border color */
+    display: flex;
+    background-color: #fff; /* White background for input area */
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle input shadow */
+}
+
+.chat-input button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500; /* Slightly bolder font weight */
+    transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+.message.bot {
+    background-color: #efefef; /* Light green */
+    float: left;
+    text-align: left;
+}
+.chat-input button:hover {
+    background-color: #0069d9;
+}
+
+/* Optional: Style the scrollbar (webkit browsers) */
+.chat-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
